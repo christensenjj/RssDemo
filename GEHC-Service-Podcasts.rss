@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xml:base="https://fxp.cloud.gehealthcare.com/FXP">
+    <channel>
+        <title>GE Healthcare Services Podcasts</title>
+        <description>You’re busy and your email inbox is full. Stay connected and informed through the GE Healthcare Global Services podcast. Listen to our business leaders give updates on strategy, tools, training, parts, products and more! Each podcast is tagged to help you focus on what’s relevant to you.</description>
+        <link>http://gehcfxp.com/</link>
+        <item>
+            <title>Proving Power and Grounding Issues as Root Cause</title>
+            <pubDate>13 June 2019</pubDate>
+            <link>https://ge.box.com/s/izemuemxa4tyd30yixnk3ksix2y1q8uy</link>
+            <description>Environmental conditions can have a big impact on the performance of our equipment. If not managed properly, related issues can lead to a poor customer experience. Jaco Bierman, Service Operations Manager-ASEAN, and Angga Andriadipura, Senior FE, describe a case in Indonesia of working with the customer to identify the root cause of performance issues, and the role we played in improving the environment.</description>
+        </item>
+        <item>
+            <title>Install Quality: New Voltage Regulation Planning Document</title>
+            <pubDate>12 June 2019</pubDate>
+            <link>https://ge.box.com/s/j2l5kbf361ok9hv2hngs89fpmkcdbr4i</link>
+            <description>Senior Electrical Engineer, Velemir Terzic, discusses the new Voltage Planning Tool that will give our customers a proactive way to determine necessary voltage tolerance and voltage regulation requirements on equipment with large and dynamic power draws. Send feedback to Corrine.Hastings@ge.com.</description>
+        </item>
+        <item>
+            <title>Are we getting what we need from suppliers? (part 2 of 2)</title>
+            <pubDate>11 June 2019</pubDate>
+            <link>https://ge.box.com/s/mi7j47fdkh70w7f0rj9vkq2yyeqgtffp</link>
+            <description>We rely heavily on outside suppliers for components of our equipment. Tommy Mitchell, Vice President of Sourcing, explains that supply parts quality is a two-way street with suppliers. He talks through our role in design parts and specifications, and better planning and expectation setting to improve on-time parts delivery. Send feedback to thomas.mitchell@ge.com.</description>
+        </item>
+    </channel>
+</rss>
