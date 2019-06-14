@@ -1,49 +1,53 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html>
+    <head>
+        <script src='https://s3.amazonaws.com/instabug-pro/sdk_releases/instabugsdk-1.1.1.min.js'></script>
+        <script type="text/javascript">
+           function submitForm(systemId) {
+                var request = new XMLHttpRequest();
+                var listNode = document.getElementById("checklists");
 
-    <title>Azure App Service - Sample Static HTML Site</title>
+                while (listNode.firstChild) {
+                    listNode.removeChild(listNode.firstChild);
+                }
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-  </head>
+                request.open('GET', 'http://localhost:8090/PMSystemData?systemId=' + systemId, false);
 
-  <body>
-    <div class="navbar-wrapper">
-      <div class="container">
-          <h1>Azure App Service - Sample Static HTML Site</h1>
-          <hr/>
-      </div>
-    </div>
+                request.onload = function () {
+                    var data = JSON.parse(this.response);
 
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+                    if (request.status >= 200 && request.status < 400) {
+                    data.forEach(function (checklist) {
+                        var li = document.createElement("li");
+                        var a = document.createElement("a");
+                        a.setAttribute("href", checklist["url"]);
+                        a.setAttribute("target", "_blank");
+                        a.innerHTML = checklist["fileName"];
+                        li.appendChild(a);
+                        document.getElementById("checklists").appendChild(li);
+                    });
+                    } else {
+                    console.log('error');
+                    }
+                };
 
-    <div class="container">
-        
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <img class="img-rectangle" src="img/azure-portal.png" alt="Azure App Service Web Apps" height="140">
-          <h2>Azure App Service Web Apps</h2>
-          <p>App Service Web Apps is a fully managed compute platform that is optimized for hosting websites and web applications. This platform-as-a-service (PaaS) offering of Microsoft Azure lets you focus on your business logic while Azure takes care of the infrastructure to run and scale your apps.</p>
-        </div>
-          <div class="col-xs-12 col-sm-6">
-              <img class="img-rectangle" src="img/cdn.png" alt="CDN" height="140">
-              <h2>Azure Content Delivery Network (CDN)</h2>
-              <p>The Azure Content Delivery Network (CDN) caches static web content at strategically placed locations to provide maximum throughput for delivering content to users. The CDN offers developers a global solution for delivering high-bandwidth content by caching the content at physical nodes across the world.</p>
-          </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+                request.send();
+            }
+        </script>
+    </head>
+    <header>
+        <h1>CheckList API Demo Interface</h1> 
+    </header>
+    <body>
+        <button type="button" onclick="window.location.href='GEHC-Service-Podcasts.rss'">Subscribe to Podcast Feed</button>
+        <script>
+            ibgSdk.init({
+               token: '66090c0ec21a6f1bfa53b364502b666e'
+            });
+          </script>
+        <br>Enter System ID to find information regarding your system: <br>
+        <input type="text" id="systemId">
+        <button type="button" onclick="submitForm(document.getElementById('systemId').value)">Submit</button>
+        <h2>Checklist Forms</h2>
+        <ul id="checklists"></ul>
+    </body>
 </html>
