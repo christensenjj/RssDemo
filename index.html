@@ -32,13 +32,20 @@
 
                 request.send();
             }
+
+            function copyLink() {
+                var link = document.createElement("textarea")
+                link.innerHTML = 'https://cs203571399565dx4cdcxa94.blob.core.windows.net/rss/GEHC-Service-Podcasts.rss';
+                link.select();
+                document.execCommand("copy");
+            }
         </script>
     </head>
     <header>
         <h1>CheckList API Demo Interface</h1> 
     </header>
     <body>
-        <button type="button" onclick="window.location.href='https://cs203571399565dx4cdcxa94.blob.core.windows.net/rss/GEHC-Service-Podcasts.rss'">Subscribe to Podcast Feed</button>
+        <button type="button" onclick="copyLink()">Subscribe to Podcast Feed</button>
         <script>
             ibgSdk.init({
                token: '66090c0ec21a6f1bfa53b364502b666e'
