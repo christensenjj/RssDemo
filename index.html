@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src='https://s3.amazonaws.com/instabug-pro/sdk_releases/instabugsdk-1.1.1.min.js'></script>
         <script type="text/javascript">
            function submitForm(systemId) {
                 var request = new XMLHttpRequest();
@@ -33,14 +34,13 @@
                 request.send();
             }
         </script>
-        <script type='text/javascript'>
-            (function (d, t) {
-              var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-              bh.type = 'text/javascript';
-              bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=l4r8esepahypaxzep0upsa';
-              s.parentNode.insertBefore(bh, s);
-              })(document, 'script');
-            </script>
+        <script>
+            ibgSdk.init({
+              zapierWebhookUrl: 'https://hooks.zapier.com/hooks/catch/5115165/vqcv8j/',
+              cloudinaryCloudName: 'check-demo',
+              cloudinaryUploadPreset: 'x82eu84y',
+            });
+        </script>
     </head>
     <header>
         <h1>CheckList API Demo Interface</h1> 
