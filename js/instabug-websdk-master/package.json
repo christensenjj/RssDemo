@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.20.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "natives": "^1.1.6"
   }
 }
