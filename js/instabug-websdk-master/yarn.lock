@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@xmldom/xmldom@^0.7.3":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.5.tgz#09fa51e356d07d0be200642b0e4f91d8e6dd408d"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -3880,12 +3884,12 @@ jasmine-core@^2.5.2, jasmine-core@~2.99.0:
   version "2.99.1"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.99.1.tgz#e6400df1e6b56e130b61c4bcd093daa7f6e8ca15"
 
-jasmine-reporters@^2.2.0:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/jasmine-reporters/-/jasmine-reporters-2.3.1.tgz#f42d578e996696163431d911c31679719fb43b3b"
+jasmine-reporters@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/jasmine-reporters/-/jasmine-reporters-2.5.0.tgz#f9e2e0f82aaa2e07e8d553be56457efe0fd8b39e"
   dependencies:
-    mkdirp "^0.5.1"
-    xmldom "^0.1.22"
+    "@xmldom/xmldom" "^0.7.3"
+    mkdirp "^1.0.4"
 
 jasmine-terminal-reporter@^1.0.0:
   version "1.0.3"
@@ -4643,6 +4647,10 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
+mkdirp@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
+
 moment@^2.14.1:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
@@ -4692,6 +4700,10 @@ nanomatch@^1.2.9:
 natives@^1.1.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/natives/-/natives-1.1.4.tgz#2f0f224fc9a7dd53407c7667c84cf8dbe773de58"
+
+natives@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/natives/-/natives-1.1.6.tgz#a603b4a498ab77173612b9ea1acdec4d980f00bb"
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -7322,10 +7334,6 @@ wtf-8@1.0.0:
 xmlcreate@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/xmlcreate/-/xmlcreate-1.0.2.tgz#fa6bf762a60a413fb3dd8f4b03c5b269238d308f"
-
-xmldom@^0.1.22:
-  version "0.1.27"
-  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.27.tgz#d501f97b3bdb403af8ef9ecc20573187aadac0e9"
 
 xmlhttprequest-ssl@1.5.3:
   version "1.5.3"
