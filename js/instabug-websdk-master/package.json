@@ -46,7 +46,7 @@
     "html-loader": "^0.5.1",
     "istanbul-instrumenter-loader": "^3.0.0",
     "jasmine-core": "^2.5.2",
-    "jasmine-reporters": "^2.2.0",
+    "jasmine-reporters": "^2.5.0",
     "jsdoc": "^3.5.5",
     "karma": "^1.5.0",
     "karma-coverage": "^1.1.1",
